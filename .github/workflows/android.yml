@@ -21,6 +21,9 @@ jobs:
         distribution: 'temurin'
         cache: gradle
 
+    - name: Set up Gradle wrapper
+      run: |
+        ./gradlew wrapper --gradle-version 4.6
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
