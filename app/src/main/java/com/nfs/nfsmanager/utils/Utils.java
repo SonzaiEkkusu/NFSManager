@@ -181,6 +181,8 @@ public class Utils {
             return "/data/adb/magisk/busybox";
         } else if (Utils.exist("/data/adb/ksu/bin/busybox")) {
             return "/data/adb/ksu/bin/busybox";
+        } else if (Utils.exist("/data/adb/ap/bin/busybox")) {
+            return "/data/adb/ap/bin/busybox";
         } else {
             return null;
         }

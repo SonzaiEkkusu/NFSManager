@@ -191,17 +191,17 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case 2:
                     if (NFS.isModuleDisabled()) {
-                        Utils.delete("/data/adb/modules/injector/disable");
+                        Utils.delete("/data/adb/modules/busybox-system-android/disable");
                     } else {
-                        Utils.create("", "/data/adb/modules/injector/disable");
+                        Utils.create("", "/data/adb/modules/busybox-system-android/disable");
                     }
                     restartApp();
                     break;
                 case 3:
                     if (NFS.isModuleRemoved()) {
-                        Utils.delete("/data/adb/modules/injector/remove");
+                        Utils.delete("/data/adb/modules/busybox-system-android/remove");
                     } else {
-                        Utils.create("", "/data/adb/modules/injector/remove");
+                        Utils.create("", "/data/adb/modules/busybox-system-android/remove");
                     }
                     restartApp();
                     break;

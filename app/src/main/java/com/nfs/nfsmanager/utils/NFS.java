@@ -21,7 +21,7 @@ import java.util.Objects;
  */
 public class NFS {
 
-    private static final String MODULE_PARANT = "/data/adb/modules/injector";
+    private static final String MODULE_PARANT = "/data/adb/modules/busybox-system-android";
     private static final String NFS_PARANT = "/data/NFS";
     private static final String MODE = NFS_PARANT + "/mode.txt";
     private static final String DOZE = NFS_PARANT + "/doze.txt";
@@ -126,7 +126,7 @@ public class NFS {
     }
 
     public static boolean magiskSupported() {
-        return Utils.exist("/sbin/.magisk") || Utils.exist("/data/adb/magisk") || Utils.exist("/data/adb/ksu/bin/busybox");
+        return Utils.exist("/sbin/.magisk") || Utils.exist("/data/adb/magisk") || Utils.exist("/data/adb/ksu/bin/busybox") || Utils.exist("/data/adb/ap/bin/busybox");
     }
 
     public static boolean isModuleParent() {

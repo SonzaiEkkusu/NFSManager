@@ -94,7 +94,7 @@ public class DashBoardFragment extends Fragment {
             @Override
             public void doInBackground() {
                 NFS.setNFSMode(value);
-                Utils.runAndGetLiveOutput("sh /data/adb/modules/injector/service.sh", Common.getOutput());
+                Utils.runAndGetLiveOutput("sh /data/adb/modules/busybox-system-android/service.sh", Common.getOutput());
             }
 
             @Override
