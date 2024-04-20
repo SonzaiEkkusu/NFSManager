@@ -26,9 +26,17 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew assembleDebug
 
-    # Add the following step to upload build artifact
     - name: Upload Artifact
       uses: actions/upload-artifact@v2
       with:
         name: app-debug
         path: app/build/outputs/apk/debug/
+
+    - name: Upload modules to release
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: app/build/outputs/apk/debug/*
+        release_name: Test Build
+        file_glob: true
+        overwrite: true
